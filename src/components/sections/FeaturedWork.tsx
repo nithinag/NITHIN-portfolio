@@ -12,7 +12,7 @@ export default function FeaturedWork() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a]">
+    <section id="projects" className="relative w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a] scroll-mt-14 md:scroll-mt-16">
       {/* Giant Marquee Section Header */}
       <GiantSectionBanner
         number="04"

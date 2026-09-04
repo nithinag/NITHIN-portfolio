@@ -9,7 +9,7 @@ export default function WorkExperience() {
   const { playSound } = usePortfolio();
 
   return (
-    <section id="experience" className="w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a]">
+    <section id="experience" className="w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a] scroll-mt-14 md:scroll-mt-16">
       <GiantSectionBanner
         number="03"
         category="EXPERIENCE SECTION"
