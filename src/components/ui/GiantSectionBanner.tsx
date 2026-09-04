@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 interface GiantSectionBannerProps {
   number: string;
@@ -24,8 +24,9 @@ export default function GiantSectionBanner({
     offset: ["start end", "end start"],
   });
 
-  // Map vertical scroll progress to horizontal translation
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+  // Map vertical scroll progress to very slow, subtle horizontal translation
+  const rawX = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
+  const x = useSpring(rawX, { stiffness: 50, damping: 20, restDelta: 0.001 });
 
   return (
     <div
