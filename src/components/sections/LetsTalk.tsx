@@ -42,17 +42,21 @@ export default function LetsTalk() {
         word2="TALK"
       />
 
-      {/* 2. SEND A MESSAGE CARD IN WARM SAND / CREAM (#ECE8DF) */}
-      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 py-12 md:py-16">
-        {/* Warm Cream Box Enclosure matching Marquee */}
-        <div className="w-full border border-[#D8D2C5] bg-[#ECE8DF] text-[#111111] p-6 sm:p-10 md:p-14 lg:p-16 space-y-10 shadow-2xl">
-          {/* Header Label */}
-          <div className="font-mono-code text-xs sm:text-[13px] text-[#786D5E] uppercase tracking-[0.25em] font-medium italic">
-            SEND A MESSAGE
+      {/* 2. SEND A MESSAGE CARD WITH PRECISE MARGINS, PADDING & BORDERS */}
+      <div className="portfolio-container py-14 md:py-20">
+        <div className="w-full max-w-5xl mx-auto border border-[#D8D2C5] bg-[#ECE8DF] text-[#111111] p-8 sm:p-12 md:p-16 clip-chamfer-lg shadow-2xl space-y-10">
+          {/* Card Header Label */}
+          <div className="flex items-center justify-between border-b border-[#D8D2C5] pb-4">
+            <div className="font-mono-code text-xs sm:text-[13px] text-[#786D5E] uppercase tracking-[0.25em] font-bold italic">
+              SEND A MESSAGE
+            </div>
+            <div className="font-mono-code text-[10px] text-[#786D5E] uppercase tracking-widest hidden sm:block">
+              [DIRECT TRANSMISSION PROTOCOL]
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* NAME FIELD (Dashed Underline Input) */}
+            {/* NAME FIELD */}
             <div className="space-y-2">
               <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
                 NAME
@@ -63,11 +67,11 @@ export default function LetsTalk() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="YOUR NAME"
-                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
+                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2.5 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
               />
             </div>
 
-            {/* EMAIL FIELD (Dashed Underline Input) */}
+            {/* EMAIL FIELD */}
             <div className="space-y-2">
               <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
                 EMAIL
@@ -78,16 +82,16 @@ export default function LetsTalk() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="YOUR EMAIL"
-                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
+                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2.5 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
               />
             </div>
 
-            {/* MESSAGE FIELD (Large Dashed Box) */}
+            {/* MESSAGE FIELD */}
             <div className="space-y-2">
               <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
                 MESSAGE
               </label>
-              <div className="relative border border-dashed border-[#A8A092] focus-within:border-[#111111] transition-colors bg-[#E6E1D7]/50">
+              <div className="relative border border-dashed border-[#A8A092] focus-within:border-[#111111] transition-colors bg-[#E2DDD2]/60 clip-chamfer">
                 <textarea
                   rows={5}
                   required
@@ -100,10 +104,10 @@ export default function LetsTalk() {
             </div>
 
             {/* SUBMIT BUTTON & CLIENT NOTICE */}
-            <div className="pt-4 space-y-4">
+            <div className="pt-4 border-t border-[#D8D2C5] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0A0A0A] hover:bg-[#1a1a1a] text-[#F2F0EA] font-mono-code text-xs font-black tracking-widest uppercase transition-all clip-chamfer-btn shadow-lg group"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#0A0A0A] hover:bg-[#1a1a1a] text-[#F2F0EA] font-mono-code text-xs font-black tracking-widest uppercase transition-all clip-chamfer-btn shadow-lg group shrink-0"
                 data-cursor="SEND"
               >
                 <span>{sending ? "OPENING MAIL.." : "SEND"}</span>
