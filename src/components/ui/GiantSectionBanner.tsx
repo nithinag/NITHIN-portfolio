@@ -4,15 +4,13 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 interface GiantSectionBannerProps {
-  number: string;
-  category: string;
+  number?: string;
+  category?: string;
   word1: string;
   word2: string;
 }
 
 export default function GiantSectionBanner({
-  number,
-  category,
   word1,
   word2,
 }: GiantSectionBannerProps) {
@@ -33,18 +31,6 @@ export default function GiantSectionBanner({
       ref={containerRef}
       className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-4 sm:py-6 md:py-8 select-none shrink-0"
     >
-      {/* Top Index & Tag Bar */}
-      <div className="portfolio-container flex items-center justify-between font-mono-code text-[11px] sm:text-xs text-[#8B8B8B] mb-2 sm:mb-3">
-        <div className="flex items-center gap-2">
-          <span className="text-[var(--accent-theme)] font-bold">{number}</span>
-          <span className="text-[#383838]">/</span>
-          <span className="text-[#F5F5F5] uppercase tracking-wider">{category}</span>
-        </div>
-        <div className="text-[10px] text-[#525252] uppercase tracking-widest hidden sm:block">
-          [SCROLL TO VIEW ARCHITECTURE]
-        </div>
-      </div>
-
       {/* Scroll-Driven Horizontal Translation Track */}
       <div className="flex overflow-hidden relative">
         <motion.div
