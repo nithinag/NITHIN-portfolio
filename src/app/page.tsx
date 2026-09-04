@@ -1,7 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import CompanyMarquee from "@/components/sections/CompanyMarquee";
 import AboutMe from "@/components/sections/AboutMe";
-import TechnologyAndBusiness from "@/components/sections/TechnologyAndBusiness";
 import WorkExperience from "@/components/sections/WorkExperience";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import InDepthLook from "@/components/sections/InDepthLook";
@@ -18,11 +17,8 @@ export default function Home() {
       {/* COMPANY MARQUEE */}
       <CompanyMarquee />
 
-      {/* 02. ABOUT SECTION (PROFILE, STATS, EDUCATION, TOOLKIT) */}
+      {/* 02. ABOUT SECTION (TECHNOLOGY × BUSINESS) */}
       <AboutMe />
-
-      {/* TECHNOLOGY & BUSINESS VENN DIAGRAM ARCHITECTURE */}
-      <TechnologyAndBusiness />
 
       {/* 03. EXPERIENCE SECTION */}
       <WorkExperience />
