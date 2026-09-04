@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0c0c0c;
+  --bg-tertiary: #141414;
+  --text-primary: #f5f5f5;
+  --text-muted: #8b8b8b;
+  --text-subtle: #525252;
+  --border-color: #1a1a1a;
+  --border-light: #262626;
+  --accent-theme: #c3fffc;
+  --accent-glow: rgba(195, 255, 252, 0.25);
+  --accent-dim: #7ee0dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #050505;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #050505;
+  color: #f5f5f5;
+  overflow-x: hidden;
+  font-family: var(--font-geist-sans), "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: default;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-theme);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-theme);
+  color: #050505;
+}
+
+/* Monospace font utility */
+.font-mono-code {
+  font-family: var(--font-geist-mono), "IBM Plex Mono", monospace;
+}
+
+/* Chamfered Cut Corner Utility */
+.clip-chamfer {
+  clip-path: polygon(
+    8px 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0 100%,
+    0 8px
+  );
+}
+
+.clip-chamfer-lg {
+  clip-path: polygon(
+    14px 0,
+    100% 0,
+    100% calc(100% - 14px),
+    calc(100% - 14px) 100%,
+    0 100%,
+    0 14px
+  );
+}
+
+.clip-chamfer-btn {
+  clip-path: polygon(
+    6px 0,
+    100% 0,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    0 100%,
+    0 6px
+  );
+}
+
+/* Text Stroke Utilities */
+.text-stroke-accent {
+  -webkit-text-stroke: 1.5px var(--accent-theme);
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #f5f5f5;
+  color: transparent;
+}
+
+.text-stroke-muted {
+  -webkit-text-stroke: 1.5px #383838;
+  color: transparent;
+}
+
+/* Grid & Layout Utilities */
+.portfolio-container {
+  width: 100%;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .portfolio-container {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+
+/* Ambient Edge Glows (Mauricio Juba Style) */
+.hud-top-glow {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 1px 15px var(--accent-glow);
+}
+
+.hud-bottom-glow {
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.8), 0 -1px 15px var(--accent-glow);
+}
+
+/* Infinite Marquee */
+@keyframes giant-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-giant-marquee {
+  display: flex;
+  width: max-content;
+  animation: giant-marquee 28s linear infinite;
+}
+
+.animate-giant-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Logo Marquee (Companies Banner) */
+@keyframes logo-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-marquee {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 35s linear infinite;
+}
+
+.animate-logo-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Pixel rendering */
+.image-pixelated {
+  image-rendering: pixelated;
+}
