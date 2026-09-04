@@ -1,7 +1,7 @@
 "use client";
 
 import { usePortfolio } from "@/context/ThemeContext";
-import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -13,35 +13,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#050505] text-[#F5F5F5] select-none pb-16 md:pb-20">
-      {/* 1. SEND ACTION & DIRECT MAIL CLIENT STRIP (EXACT MAURICIO JUBA 1:1) */}
-      <div className="portfolio-container py-12 md:py-16 space-y-4">
-        <div>
-          <a
-            href={`mailto:${portfolioData.contact.email}?subject=Collaboration%20Inquiry%20-%20Nithin%20Nagabushanam`}
-            onClick={() => playSound("click")}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent-theme)] text-[#050505] font-mono-code text-xs font-black tracking-widest uppercase hover:opacity-90 transition-all clip-chamfer-btn shadow-[0_0_20px_var(--accent-glow)] group"
-            data-cursor="SEND"
-          >
-            <span>SEND</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </div>
-
-        <p className="font-mono-code text-[11px] sm:text-xs text-[#6b7c85] tracking-wider uppercase">
-          OPENS YOUR MAIL CLIENT — OR WRITE DIRECT TO{" "}
-          <a
-            href={`mailto:${portfolioData.contact.email}`}
-            onClick={() => playSound("click")}
-            className="text-[#A0A0A0] hover:text-[var(--accent-theme)] transition-colors underline underline-offset-4"
-          >
-            {portfolioData.contact.email}
-          </a>
-        </p>
-      </div>
-
-      {/* 2. MIDDLE SUB-ROW: COPYRIGHT & BACK TO TOP */}
-      <div className="w-full border-t border-[#1a1a1a]">
+    <footer className="w-full bg-[#050505] text-[#F5F5F5] select-none pb-20 md:pb-24 border-t border-[#1a1a1a]">
+      {/* 1. MIDDLE SUB-ROW: COPYRIGHT & BACK TO TOP */}
+      <div className="w-full">
         <div className="portfolio-container py-6 flex items-center justify-between font-mono-code text-xs text-[#8B8B8B]">
           <div className="uppercase tracking-wider text-[11px] sm:text-xs">
             © 2026 {portfolioData.personal.name}
@@ -58,7 +32,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 3. FINAL MONOGRAM & RIGHTS RESERVED ROW (EXACT MAURICIO JUBA 1:1) */}
+      {/* 2. FINAL MONOGRAM & RIGHTS RESERVED ROW (EXACT MAURICIO JUBA 1:1) */}
       <div className="w-full border-t border-[#1a1a1a] bg-[#050505]">
         <div className="portfolio-container py-10 md:py-14 flex items-center justify-between">
           {/* Stylized Big Monogram Emblem */}
