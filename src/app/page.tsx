@@ -3,8 +3,6 @@ import CompanyMarquee from "@/components/sections/CompanyMarquee";
 import AboutMe from "@/components/sections/AboutMe";
 import WorkExperience from "@/components/sections/WorkExperience";
 import FeaturedWork from "@/components/sections/FeaturedWork";
-import InDepthLook from "@/components/sections/InDepthLook";
-import ExperimentLab from "@/components/sections/ExperimentLab";
 import LetsTalk from "@/components/sections/LetsTalk";
 import Footer from "@/components/layout/Footer";
 
@@ -23,10 +21,8 @@ export default function Home() {
       {/* 03. EXPERIENCE SECTION */}
       <WorkExperience />
 
-      {/* 04. PROJECTS SECTION (KEPT AS EXISTING) */}
+      {/* 04. PROJECTS SECTION */}
       <FeaturedWork />
-      <InDepthLook />
-      <ExperimentLab />
 
       {/* 05. CONTACT SECTION */}
       <LetsTalk />
