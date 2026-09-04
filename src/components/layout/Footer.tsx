@@ -48,7 +48,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="w-full bg-[#050505] border-t border-[#1a1a1a] text-[#F5F5F5] py-12 md:py-16">
+    <footer className="w-full bg-[#050505] border-t border-[#1a1a1a] text-[#F5F5F5] pt-12 md:pt-16 pb-28 sm:pb-32 md:pb-36">
       <div className="portfolio-container">
         <div className="border border-[#1f1f1f] bg-[#0a0a0a] p-6 sm:p-10 clip-chamfer-lg space-y-8">
           {/* Header row with monogram & branding */}
