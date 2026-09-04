@@ -29,20 +29,20 @@ export default function GiantSectionBanner({
   return (
     <div
       ref={containerRef}
-      className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-4 sm:py-6 md:py-8 select-none shrink-0"
+      className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-1 sm:py-2 md:py-3 select-none shrink-0"
     >
       {/* Scroll-Driven Horizontal Translation Track */}
       <div className="flex overflow-hidden relative">
         <motion.div
           style={{ x }}
-          className="flex items-center gap-8 sm:gap-12 whitespace-nowrap will-change-transform"
+          className="flex items-center gap-6 sm:gap-10 md:gap-12 whitespace-nowrap will-change-transform"
         >
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-6 sm:gap-8 shrink-0">
-              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase text-[var(--accent-theme)] leading-none transition-colors duration-300">
+            <div key={i} className="flex items-center gap-4 sm:gap-6 md:gap-8 shrink-0">
+              <span className="text-[clamp(4.8rem,14vw,15.5rem)] font-black tracking-[-0.04em] uppercase text-stroke-accent leading-[0.84] transition-colors duration-300">
                 {word1}
               </span>
-              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase text-stroke-white leading-none">
+              <span className="text-[clamp(4.8rem,14vw,15.5rem)] font-black tracking-[-0.04em] uppercase text-[var(--accent-theme)] leading-[0.84] transition-colors duration-300">
                 {word2}
               </span>
             </div>
