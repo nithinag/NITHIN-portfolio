@@ -29,6 +29,27 @@ export default function AboutMe() {
                 </div>
               ))}
             </div>
+
+            {/* Education Summary Card */}
+            <div className="p-6 bg-[#0a0a0a] border border-[#1f1f1f] clip-chamfer space-y-3 font-mono-code text-xs mt-6">
+              <div className="flex items-center justify-between border-b border-[#1a1a1a] pb-2 text-[var(--accent-theme)] font-bold">
+                <span>EDUCATION</span>
+                <span>17/09/2022 — 10/04/2026</span>
+              </div>
+              <div className="text-sm font-bold text-[#F5F5F5]">
+                B.E. — COMPUTER SCIENCE AND ENGINEERING
+              </div>
+              <div className="text-[#8B8B8B]">
+                Sathyabama Institute of Science and Technology • Chennai, India
+              </div>
+              <div className="pt-2 text-[10px] text-[#666] flex flex-wrap gap-1.5 uppercase">
+                {["AI", "Machine Learning", "DBMS", "DSA", "OS", "Networks", "Software Engg", "Entrepreneurship"].map((s) => (
+                  <span key={s} className="px-2 py-0.5 bg-[#141414] border border-[#222] text-[#8B8B8B]">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right: Stats Grid (5 stats aligned like blueprint) */}

@@ -190,27 +190,27 @@ export const portfolioData = {
   blueprintToolkit: [
     {
       category: "Programming",
-      skills: ["Python", "Java", "SQL", "JavaScript"]
+      skills: ["PYTHON", "JAVA", "SQL"]
     },
     {
       category: "AI / Generative AI",
-      skills: ["LLMs", "RAG", "LangChain", "Prompt Engineering"]
+      skills: ["LLMs", "RAG", "AI AGENTS", "LANGCHAIN", "PROMPT ENGINEERING", "TENSORFLOW", "PYTORCH"]
     },
     {
       category: "Frameworks",
-      skills: ["FastAPI", "TensorFlow", "PyTorch", "Streamlit"]
+      skills: ["FASTAPI", "STREAMLIT", "FLUTTER", "JAVASCRIPT", "RESTFUL APIs"]
     },
     {
       category: "Databases",
-      skills: ["MySQL", "PostgreSQL", "Oracle SQL"]
+      skills: ["MYSQL", "POSTGRESQL", "ORACLE SQL", "PL/SQL"]
     },
     {
       category: "Tools",
-      skills: ["Git", "GitHub", "Docker", "Postman"]
+      skills: ["GIT", "GITHUB", "DOCKER", "POSTMAN", "VS CODE", "CURSOR", "ANTIGRAVITY", "CLAUDE"]
     },
     {
-      category: "Product",
-      skills: ["Product Management", "Prototyping", "Teamwork"]
+      category: "Business",
+      skills: ["PRODUCT MANAGEMENT", "ENTREPRENEURSHIP", "PROTOTYPING", "PROBLEM SOLVING", "TEAMWORK", "REQUIREMENT DISCOVERY", "CUSTOMER DEPLOYMENTS"]
     }
   ],
 
