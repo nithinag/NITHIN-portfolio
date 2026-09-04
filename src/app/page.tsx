@@ -1,7 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import CompanyMarquee from "@/components/sections/CompanyMarquee";
 import AboutMe from "@/components/sections/AboutMe";
-import MyToolkit from "@/components/sections/MyToolkit";
 import WorkExperience from "@/components/sections/WorkExperience";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import InDepthLook from "@/components/sections/InDepthLook";
@@ -20,7 +19,6 @@ export default function Home() {
 
       {/* 02. ABOUT SECTION */}
       <AboutMe />
-      <MyToolkit />
 
       {/* 03. EXPERIENCE SECTION */}
       <WorkExperience />
