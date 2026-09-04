@@ -24,9 +24,9 @@ export default function GiantSectionBanner({
     offset: ["start end", "end start"],
   });
 
-  // Map vertical scroll progress to very slow, subtle horizontal translation
-  const rawX = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
-  const x = useSpring(rawX, { stiffness: 50, damping: 20, restDelta: 0.001 });
+  // Map vertical scroll progress to ultra-slow, gentle horizontal drift
+  const rawX = useTransform(scrollYProgress, [0, 1], ["0%", "-4%"]);
+  const x = useSpring(rawX, { stiffness: 45, damping: 25, restDelta: 0.001 });
 
   return (
     <div
