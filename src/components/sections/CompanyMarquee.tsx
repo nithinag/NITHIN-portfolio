@@ -139,10 +139,10 @@ export default function CompanyMarquee() {
   ];
 
   return (
-    <section className="relative w-full min-h-[260px] sm:min-h-[300px] md:min-h-[340px] bg-[#ECE8DF] border-y border-[#D8D2C5] py-12 md:py-16 select-none overflow-hidden text-[#111111] flex flex-col justify-between">
+    <section className="relative w-full min-h-[200px] sm:min-h-[240px] md:min-h-[280px] bg-[#ECE8DF] border-y border-[#D8D2C5] py-8 sm:py-10 md:py-12 select-none overflow-hidden text-[#111111] flex flex-col justify-between">
       {/* Top Header Label (Exact Mauricio Juba 1:1) */}
-      <div className="portfolio-container text-center pt-1 mb-6 md:mb-10">
-        <p className="font-mono-code text-xs sm:text-[13px] italic tracking-[0.25em] text-[#786D5E] uppercase font-medium">
+      <div className="portfolio-container text-center pt-1 mb-4 md:mb-6">
+        <p className="font-mono-code text-[11px] sm:text-xs md:text-[13px] italic tracking-[0.25em] text-[#786D5E] uppercase font-medium">
           SOME OF THE COMPANIES I&apos;VE WORKED WITH
         </p>
       </div>

@@ -31,10 +31,10 @@ export default function GiantSectionBanner({
   return (
     <div
       ref={containerRef}
-      className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-8 md:py-14 select-none"
+      className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-4 sm:py-6 md:py-8 select-none shrink-0"
     >
       {/* Top Index & Tag Bar */}
-      <div className="portfolio-container flex items-center justify-between font-mono-code text-xs text-[#8B8B8B] mb-4">
+      <div className="portfolio-container flex items-center justify-between font-mono-code text-[11px] sm:text-xs text-[#8B8B8B] mb-2 sm:mb-3">
         <div className="flex items-center gap-2">
           <span className="text-[var(--accent-theme)] font-bold">{number}</span>
           <span className="text-[#383838]">/</span>
@@ -49,14 +49,14 @@ export default function GiantSectionBanner({
       <div className="flex overflow-hidden relative">
         <motion.div
           style={{ x }}
-          className="flex items-center gap-12 whitespace-nowrap will-change-transform"
+          className="flex items-center gap-8 sm:gap-12 whitespace-nowrap will-change-transform"
         >
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-8 shrink-0">
-              <span className="text-5xl sm:text-7xl md:text-9xl xl:text-[10.5rem] font-black tracking-tighter uppercase text-[var(--accent-theme)] leading-none transition-colors duration-300">
+            <div key={i} className="flex items-center gap-6 sm:gap-8 shrink-0">
+              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase text-[var(--accent-theme)] leading-none transition-colors duration-300">
                 {word1}
               </span>
-              <span className="text-5xl sm:text-7xl md:text-9xl xl:text-[10.5rem] font-black tracking-tighter uppercase text-stroke-white leading-none">
+              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase text-stroke-white leading-none">
                 {word2}
               </span>
             </div>

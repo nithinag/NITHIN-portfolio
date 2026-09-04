@@ -12,10 +12,10 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="relative w-full bg-[#080909] text-[#F2F0EA] border-b border-[#1b2226] select-none scroll-mt-14 md:scroll-mt-16"
+      className="relative w-full min-h-[100dvh] lg:h-[100dvh] flex flex-col justify-between bg-[#080909] text-[#F2F0EA] border-b border-[#1b2226] select-none scroll-mt-14 md:scroll-mt-16 overflow-hidden"
     >
       {/* ========================================================================= */}
-      {/* 1. GIANT MARQUEE HEADER (ABOUT ME BAR FROM 2ND & 3RD IMAGE) */}
+      {/* 1. GIANT MARQUEE HEADER (ABOUT ME BAR) */}
       {/* ========================================================================= */}
       <GiantSectionBanner
         number="02"
@@ -25,18 +25,18 @@ export default function AboutMe() {
       />
 
       {/* ========================================================================= */}
-      {/* 2. SUB-HEADER STRIP (FROM 1ST IMAGE) */}
+      {/* 2. SUB-HEADER STRIP */}
       {/* ========================================================================= */}
-      <div className="w-full border-b border-[#1b2226] px-4 sm:px-8 md:px-12 lg:px-16 py-3.5 flex items-center justify-between font-mono-code text-[11px] sm:text-xs bg-[#080909]">
+      <div className="w-full border-b border-[#1b2226] px-4 sm:px-8 md:px-12 lg:px-16 py-2.5 sm:py-3 flex items-center justify-between font-mono-code text-[10px] sm:text-xs bg-[#080909] shrink-0">
         {/* Left: 02 / ABOUT */}
-        <div className="flex items-center gap-2 px-3 py-1 border border-[#1b2226] bg-[#0c0e0e] text-[#F2F0EA] clip-chamfer-btn">
+        <div className="flex items-center gap-2 px-2.5 py-0.5 border border-[#1b2226] bg-[#0c0e0e] text-[#F2F0EA] clip-chamfer-btn">
           <span className="font-bold text-[var(--accent-theme)]">02</span>
           <span className="text-[#445258]">/</span>
           <span className="tracking-widest font-semibold uppercase">ABOUT</span>
         </div>
 
         {/* Right: [PEOPLE × TECHNOLOGY × IMPACT] */}
-        <div className="tracking-[0.2em] text-[#6b7c85] text-[10px] sm:text-[11px] uppercase font-medium">
+        <div className="tracking-[0.2em] text-[#6b7c85] text-[9px] sm:text-[11px] uppercase font-medium">
           [PEOPLE × TECHNOLOGY × IMPACT]
         </div>
       </div>
@@ -44,35 +44,35 @@ export default function AboutMe() {
       {/* ========================================================================= */}
       {/* 3. MAIN EDITORIAL GRID (PORTRAIT REMOVED, VENN DIAGRAM EXPANDED) */}
       {/* ========================================================================= */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[580px] xl:min-h-[640px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 flex-1 min-h-0">
         {/* ======================================================================= */}
         {/* LEFT COLUMN: 50% (lg:col-span-6) — TYPOGRAPHY & MANIFESTO */}
         {/* ======================================================================= */}
-        <div className="lg:col-span-6 border-b lg:border-b-0 lg:border-r border-[#1b2226] p-6 sm:p-10 md:p-12 xl:p-16 flex flex-col justify-between space-y-8">
-          <div className="space-y-6">
+        <div className="lg:col-span-6 border-b lg:border-b-0 lg:border-r border-[#1b2226] p-5 sm:p-8 md:p-10 xl:p-12 flex flex-col justify-between space-y-4 sm:space-y-6">
+          <div className="space-y-3 sm:space-y-5">
             {/* Top Label */}
-            <div className="font-mono-code text-[11px] sm:text-xs font-semibold text-[var(--accent-theme)] tracking-[0.25em] uppercase">
+            <div className="font-mono-code text-[10px] sm:text-xs font-semibold text-[var(--accent-theme)] tracking-[0.25em] uppercase">
               PASSION DRIVEN
             </div>
 
             {/* Enormous Display Typography */}
             <div className="space-y-0 leading-[0.88] tracking-[-0.04em] font-sans">
               <div
-                className="text-[clamp(2.8rem,5.5vw,5.6rem)] font-black uppercase text-transparent"
+                className="text-[clamp(2.4rem,4.8vw,5.0rem)] font-black uppercase text-transparent"
                 style={{ WebkitTextStroke: "1.5px #F2F0EA" }}
               >
                 DRIVEN BY
               </div>
-              <div className="text-[clamp(2.8rem,5.5vw,5.6rem)] font-black uppercase text-[var(--accent-theme)] transition-colors duration-300">
+              <div className="text-[clamp(2.4rem,4.8vw,5.0rem)] font-black uppercase text-[var(--accent-theme)] transition-colors duration-300">
                 TECHNOLOGY
               </div>
-              <div className="text-[clamp(2.8rem,5.5vw,5.6rem)] font-black uppercase text-[var(--accent-theme)] transition-colors duration-300">
+              <div className="text-[clamp(2.4rem,4.8vw,5.0rem)] font-black uppercase text-[var(--accent-theme)] transition-colors duration-300">
                 AND BUSINESS.
               </div>
             </div>
 
             {/* Personal Statement */}
-            <p className="font-mono-code text-xs sm:text-[13px] md:text-sm text-[#8e9fa8] leading-relaxed max-w-lg pt-2 font-light">
+            <p className="font-mono-code text-xs sm:text-[13px] md:text-sm text-[#8e9fa8] leading-relaxed max-w-lg pt-1 font-light">
               I’m deeply passionate about leveraging technology <br className="hidden sm:inline" />
               to solve real-world problems and building products <br className="hidden sm:inline" />
               that create meaningful business impact.
@@ -80,15 +80,15 @@ export default function AboutMe() {
           </div>
 
           {/* Bottom Left Statement Box */}
-          <div className="pt-6 border-t border-[#1b2226]">
+          <div className="pt-3 sm:pt-4 border-t border-[#1b2226]">
             <div className="flex items-center border border-[#1b2226] bg-[#0b0e0f] w-full max-w-md">
               {/* Left Arrow Sub-Box */}
-              <div className="w-14 sm:w-16 h-14 sm:h-16 flex items-center justify-center border-r border-[#1b2226] text-[var(--accent-theme)] shrink-0">
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              <div className="w-11 sm:w-14 h-11 sm:h-14 flex items-center justify-center border-r border-[#1b2226] text-[var(--accent-theme)] shrink-0">
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
 
               {/* Right Text */}
-              <div className="px-4 sm:px-6 py-2 font-mono-code text-[10px] sm:text-[11px] text-[#F2F0EA] tracking-widest font-semibold uppercase leading-tight space-y-0.5">
+              <div className="px-3 sm:px-5 py-1.5 font-mono-code text-[9px] sm:text-[11px] text-[#F2F0EA] tracking-widest font-semibold uppercase leading-tight space-y-0.5">
                 <p>EXPLORING IDEAS.</p>
                 <p>BUILDING SOLUTIONS.</p>
                 <p className="text-[var(--accent-theme)]">CREATING IMPACT.</p>
@@ -100,7 +100,7 @@ export default function AboutMe() {
         {/* ======================================================================= */}
         {/* RIGHT COLUMN: 50% (lg:col-span-6) — LARGE EXPANDED VENN DIAGRAM */}
         {/* ======================================================================= */}
-        <div className="lg:col-span-6 p-6 sm:p-10 md:p-12 xl:p-16 flex flex-col justify-between items-center relative overflow-hidden bg-[#080909]">
+        <div className="lg:col-span-6 p-5 sm:p-8 md:p-10 xl:p-12 flex flex-col justify-between items-center relative overflow-hidden bg-[#080909]">
           {/* Top subtle category indicator */}
           <div className="w-full flex items-center justify-end font-mono-code text-[10px] text-[#6b7c85] uppercase tracking-widest">
             <span>[SYS.INTERSECTION // 2026]</span>
@@ -226,7 +226,7 @@ export default function AboutMe() {
           </div>
 
           {/* Bottom Statement (Aligned with bottom left) */}
-          <div className="w-full flex items-center justify-between border-t border-[#1b2226] pt-6 font-mono-code text-[10px] sm:text-[11px] text-[#8e9fa8] uppercase tracking-wider">
+          <div className="w-full flex items-center justify-between border-t border-[#1b2226] pt-3 sm:pt-5 font-mono-code text-[9px] sm:text-[11px] text-[#8e9fa8] uppercase tracking-wider">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-[var(--accent-theme)] inline-block" />
               <span className="text-[#F2F0EA] font-semibold">TECHNOLOGY CREATES POSSIBILITIES.</span>

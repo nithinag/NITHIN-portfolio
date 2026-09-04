@@ -13,17 +13,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#050505] text-[#F5F5F5] select-none pb-20 md:pb-24 border-t border-[#1a1a1a]">
+    <footer className="w-full bg-[#050505] text-[#F5F5F5] select-none pb-14 md:pb-16 border-t border-[#1a1a1a]">
       {/* 1. MIDDLE SUB-ROW: COPYRIGHT & BACK TO TOP */}
       <div className="w-full">
-        <div className="portfolio-container py-6 flex items-center justify-between font-mono-code text-xs text-[#8B8B8B]">
-          <div className="uppercase tracking-wider text-[11px] sm:text-xs">
+        <div className="portfolio-container py-4 sm:py-5 flex items-center justify-between font-mono-code text-[11px] sm:text-xs text-[#8B8B8B]">
+          <div className="uppercase tracking-wider text-[10px] sm:text-xs">
             © 2026 {portfolioData.personal.name}
           </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 hover:text-[var(--accent-theme)] transition-colors uppercase tracking-widest text-[11px] sm:text-xs font-bold"
+            className="flex items-center gap-1.5 sm:gap-2 hover:text-[var(--accent-theme)] transition-colors uppercase tracking-widest text-[10px] sm:text-xs font-bold"
             data-cursor="TOP"
           >
             <span>BACK TO TOP</span>
@@ -32,13 +32,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 2. FINAL MONOGRAM & RIGHTS RESERVED ROW (EXACT MAURICIO JUBA 1:1) */}
+      {/* 2. FINAL MONOGRAM & RIGHTS RESERVED ROW */}
       <div className="w-full border-t border-[#1a1a1a] bg-[#050505]">
-        <div className="portfolio-container py-10 md:py-14 flex items-center justify-between">
+        <div className="portfolio-container py-6 sm:py-8 flex items-center justify-between">
           {/* Stylized Big Monogram Emblem */}
           <div className="flex items-center gap-2 group cursor-pointer" onClick={scrollToTop}>
             <svg
-              className="h-9 sm:h-11 w-auto text-[#F5F5F5] group-hover:text-[var(--accent-theme)] transition-colors"
+              className="h-8 sm:h-10 w-auto text-[#F5F5F5] group-hover:text-[var(--accent-theme)] transition-colors"
               viewBox="0 0 70 40"
               fill="currentColor"
             >
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Rights Reserved */}
-          <div className="font-mono-code text-[11px] sm:text-xs text-[#525252] tracking-wider uppercase text-right">
+          <div className="font-mono-code text-[10px] sm:text-[11px] text-[#525252] tracking-wider uppercase text-right">
             © 2026 {portfolioData.personal.name}. ALL RIGHTS RESERVED.
           </div>
         </div>

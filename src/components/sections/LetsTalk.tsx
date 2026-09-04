@@ -32,7 +32,7 @@ export default function LetsTalk() {
   return (
     <section
       id="contact"
-      className="w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a] scroll-mt-14 md:scroll-mt-16 select-none"
+      className="w-full min-h-[100dvh] lg:h-[100dvh] flex flex-col justify-between bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a] scroll-mt-14 md:scroll-mt-16 select-none overflow-hidden"
     >
       {/* 1. GIANT SCROLL-LINKED MARQUEE BANNER: LET'S TALK */}
       <GiantSectionBanner
@@ -43,75 +43,77 @@ export default function LetsTalk() {
       />
 
       {/* 2. EXACT ALIGNED CARD FOLLOWING PROJECTS SECTION MARGIN & BORDER */}
-      <div className="portfolio-container py-16 md:py-24">
+      <div className="portfolio-container py-4 sm:py-6 md:py-8 flex-1 flex flex-col justify-center min-h-0">
         {/* Chamfered Card Enclosure Matching Projects Section Exactly */}
-        <div className="w-full border border-[#D8D2C5] bg-[#ECE8DF] text-[#111111] p-6 sm:p-8 md:p-12 clip-chamfer-lg shadow-2xl space-y-8">
+        <div className="w-full border border-[#D8D2C5] bg-[#ECE8DF] text-[#111111] p-5 sm:p-7 md:p-9 xl:p-10 clip-chamfer-lg shadow-2xl space-y-4 sm:space-y-6">
           {/* Header Label */}
-          <div className="font-mono-code text-xs sm:text-[13px] text-[#786D5E] uppercase tracking-[0.25em] font-bold italic border-b border-[#D8D2C5] pb-4 flex items-center justify-between">
+          <div className="font-mono-code text-[11px] sm:text-xs text-[#786D5E] uppercase tracking-[0.25em] font-bold italic border-b border-[#D8D2C5] pb-2.5 sm:pb-3 flex items-center justify-between">
             <span>SEND A MESSAGE</span>
             <span className="text-[10px] text-[#9E9587] font-normal tracking-widest hidden sm:inline">[DIRECT PROTOCOL]</span>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
-            {/* NAME FIELD (Dashed Underline Input) */}
-            <div className="space-y-2">
-              <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
-                NAME
-              </label>
-              <input
-                type="text"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="YOUR NAME"
-                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
-              />
-            </div>
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {/* NAME FIELD (Dashed Underline Input) */}
+              <div className="space-y-1 sm:space-y-1.5">
+                <label className="font-mono-code text-[10px] sm:text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
+                  NAME
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="YOUR NAME"
+                  className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-xs sm:text-sm md:text-base font-bold px-0 py-1.5 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
+                />
+              </div>
 
-            {/* EMAIL FIELD (Dashed Underline Input) */}
-            <div className="space-y-2">
-              <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
-                EMAIL
-              </label>
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="YOUR EMAIL"
-                className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-bold px-0 py-2 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
-              />
+              {/* EMAIL FIELD (Dashed Underline Input) */}
+              <div className="space-y-1 sm:space-y-1.5">
+                <label className="font-mono-code text-[10px] sm:text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
+                  EMAIL
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="YOUR EMAIL"
+                  className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-xs sm:text-sm md:text-base font-bold px-0 py-1.5 outline-none border-b border-dashed border-[#A8A092] focus:border-[#111111] transition-colors"
+                />
+              </div>
             </div>
 
             {/* MESSAGE FIELD (Dashed Box) */}
-            <div className="space-y-2">
-              <label className="font-mono-code text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
+            <div className="space-y-1 sm:space-y-1.5">
+              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#786D5E] uppercase tracking-widest block font-bold">
                 MESSAGE
               </label>
               <div className="relative border border-dashed border-[#A8A092] focus-within:border-[#111111] transition-colors bg-[#E6E1D7]/50 clip-chamfer">
                 <textarea
-                  rows={4}
+                  rows={3}
                   required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="TYPE YOUR MESSAGE..."
-                  className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-sm sm:text-base font-medium p-4 outline-none resize-none"
+                  className="w-full bg-transparent text-[#111111] placeholder-[#9E9587] font-mono-code text-xs sm:text-sm font-medium p-3 sm:p-3.5 outline-none resize-none"
                 />
               </div>
             </div>
 
             {/* SUBMIT BUTTON & CLIENT NOTICE */}
-            <div className="pt-4 border-t border-[#D8D2C5] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="pt-2 sm:pt-3 border-t border-[#D8D2C5] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#0A0A0A] hover:bg-[#1a1a1a] text-[#F2F0EA] font-mono-code text-xs font-black tracking-widest uppercase transition-all clip-chamfer-btn shadow-lg group"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 bg-[#0A0A0A] hover:bg-[#1a1a1a] text-[#F2F0EA] font-mono-code text-[11px] sm:text-xs font-black tracking-widest uppercase transition-all clip-chamfer-btn shadow-lg group shrink-0"
                 data-cursor="SEND"
               >
                 <span>{sending ? "OPENING MAIL.." : "SEND"}</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[var(--accent-theme)]" />
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[var(--accent-theme)]" />
               </button>
 
-              <p className="font-mono-code text-[10px] sm:text-[11px] text-[#786D5E] tracking-wider uppercase font-medium">
+              <p className="font-mono-code text-[9px] sm:text-[10px] text-[#786D5E] tracking-wider uppercase font-medium">
                 OPENS YOUR MAIL CLIENT — OR WRITE DIRECT TO{" "}
                 <a
                   href={`mailto:${portfolioData.contact.email}`}
