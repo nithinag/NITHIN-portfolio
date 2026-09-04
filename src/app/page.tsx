@@ -17,7 +17,7 @@ export default function Home() {
       {/* COMPANY MARQUEE */}
       <CompanyMarquee />
 
-      {/* 02. ABOUT SECTION (TECHNOLOGY × BUSINESS) */}
+      {/* 02. ABOUT SECTION */}
       <AboutMe />
 
       {/* 03. EXPERIENCE SECTION */}
