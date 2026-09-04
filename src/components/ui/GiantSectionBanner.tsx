@@ -1,5 +1,8 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 interface GiantSectionBannerProps {
   number: string;
   category: string;
@@ -13,10 +16,22 @@ export default function GiantSectionBanner({
   word1,
   word2,
 }: GiantSectionBannerProps) {
-  const phrase = `${word1} ${word2}`;
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Track vertical scroll of this component across the viewport
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Map vertical scroll progress to horizontal translation
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
 
   return (
-    <div className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-8 md:py-14 select-none">
+    <div
+      ref={containerRef}
+      className="w-full overflow-hidden border-b border-[#1a1a1a] bg-[#050505] py-8 md:py-14 select-none"
+    >
       {/* Top Index & Tag Bar */}
       <div className="portfolio-container flex items-center justify-between font-mono-code text-xs text-[#8B8B8B] mb-4">
         <div className="flex items-center gap-2">
@@ -29,12 +44,15 @@ export default function GiantSectionBanner({
         </div>
       </div>
 
-      {/* Giant Marquee Track */}
+      {/* Scroll-Driven Horizontal Translation Track */}
       <div className="flex overflow-hidden relative">
-        <div className="animate-giant-marquee flex items-center gap-12 whitespace-nowrap">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-8">
-              <span className="text-5xl sm:text-7xl md:text-9xl xl:text-[10.5rem] font-black tracking-tighter uppercase text-[var(--accent-theme)] leading-none">
+        <motion.div
+          style={{ x }}
+          className="flex items-center gap-12 whitespace-nowrap will-change-transform"
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-8 shrink-0">
+              <span className="text-5xl sm:text-7xl md:text-9xl xl:text-[10.5rem] font-black tracking-tighter uppercase text-[var(--accent-theme)] leading-none transition-colors duration-300">
                 {word1}
               </span>
               <span className="text-5xl sm:text-7xl md:text-9xl xl:text-[10.5rem] font-black tracking-tighter uppercase text-stroke-white leading-none">
@@ -42,8 +60,9 @@ export default function GiantSectionBanner({
               </span>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 }
+
