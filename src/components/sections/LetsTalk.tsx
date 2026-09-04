@@ -32,7 +32,7 @@ export default function LetsTalk() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[calc(100vh-64px)] bg-[#050505] text-[#F5F5F5] scroll-mt-14 md:scroll-mt-16 select-none flex flex-col justify-between"
+      className="w-full bg-[#050505] text-[#F5F5F5] border-b border-[#1a1a1a] scroll-mt-14 md:scroll-mt-16 select-none"
     >
       {/* 1. GIANT SCROLL-LINKED MARQUEE BANNER: LET'S TALK */}
       <GiantSectionBanner
@@ -42,18 +42,23 @@ export default function LetsTalk() {
         word2="TALK"
       />
 
-      {/* 2. EXACT 1:1 FORM AS PER MAURICIO JUBA SITE (IMAGE 1 REFERENCE) */}
-      <div className="portfolio-container py-12 md:py-20 flex-1 flex flex-col justify-center">
-        <div className="w-full max-w-5xl mx-auto space-y-10">
-          {/* Top Label */}
-          <div className="font-mono-code text-xs text-[var(--accent-theme)] uppercase tracking-[0.25em] font-semibold">
-            SEND A MESSAGE
+      {/* 2. VISIBLE CARD / PANEL CONTAINER (EXACT MAURICIO JUBA 1:1) */}
+      <div className="portfolio-container py-12 md:py-16">
+        <div className="w-full border border-[#1f1f1f] bg-[#0a0a0a] p-6 sm:p-10 md:p-12 clip-chamfer-lg shadow-2xl space-y-8">
+          {/* Card Header Tag */}
+          <div className="flex items-center justify-between border-b border-[#1a1a1a] pb-4">
+            <div className="font-mono-code text-xs text-[var(--accent-theme)] uppercase tracking-[0.25em] font-bold">
+              // SEND A MESSAGE
+            </div>
+            <div className="font-mono-code text-[10px] text-[#525252] uppercase tracking-widest hidden sm:block">
+              [DIRECT TRANSMISSION PROTOCOL]
+            </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* NAME FIELD */}
             <div className="space-y-2">
-              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#6b7c85] uppercase tracking-widest block font-medium">
+              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#8e9fa8] uppercase tracking-widest block font-semibold">
                 NAME
               </label>
               <input
@@ -62,13 +67,13 @@ export default function LetsTalk() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="YOUR NAME"
-                className="w-full bg-[#E5E9EC] text-[#0A0A0A] placeholder-[#778086] font-mono-code text-sm sm:text-base font-bold px-5 py-4 outline-none border border-transparent focus:border-[var(--accent-theme)] transition-colors clip-chamfer"
+                className="w-full bg-[#E5E9EC] text-[#0A0A0A] placeholder-[#778086] font-mono-code text-sm sm:text-base font-bold px-4 py-3.5 outline-none border border-transparent focus:border-[var(--accent-theme)] transition-colors clip-chamfer"
               />
             </div>
 
             {/* EMAIL FIELD */}
             <div className="space-y-2">
-              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#6b7c85] uppercase tracking-widest block font-medium">
+              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#8e9fa8] uppercase tracking-widest block font-semibold">
                 EMAIL
               </label>
               <input
@@ -77,13 +82,13 @@ export default function LetsTalk() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="YOUR EMAIL"
-                className="w-full bg-[#E5E9EC] text-[#0A0A0A] placeholder-[#778086] font-mono-code text-sm sm:text-base font-bold px-5 py-4 outline-none border border-transparent focus:border-[var(--accent-theme)] transition-colors clip-chamfer"
+                className="w-full bg-[#E5E9EC] text-[#0A0A0A] placeholder-[#778086] font-mono-code text-sm sm:text-base font-bold px-4 py-3.5 outline-none border border-transparent focus:border-[var(--accent-theme)] transition-colors clip-chamfer"
               />
             </div>
 
             {/* MESSAGE FIELD */}
             <div className="space-y-2">
-              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#6b7c85] uppercase tracking-widest block font-medium">
+              <label className="font-mono-code text-[10px] sm:text-[11px] text-[#8e9fa8] uppercase tracking-widest block font-semibold">
                 MESSAGE
               </label>
               <textarea
@@ -92,15 +97,15 @@ export default function LetsTalk() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="TYPE YOUR MESSAGE..."
-                className="w-full bg-transparent text-[#F5F5F5] placeholder-[#384248] font-mono-code text-sm sm:text-base px-0 py-2 outline-none border-b border-[#222] focus:border-[var(--accent-theme)] transition-colors resize-none"
+                className="w-full bg-[#050505] text-[#F5F5F5] placeholder-[#444] font-mono-code text-sm sm:text-base px-4 py-3 outline-none border border-[#1f1f1f] focus:border-[var(--accent-theme)] transition-colors resize-none clip-chamfer"
               />
             </div>
 
             {/* ACTION BUTTON & CAPTION */}
-            <div className="pt-6 border-t border-dashed border-[#1a1a1a] space-y-4">
+            <div className="pt-4 border-t border-[#1a1a1a] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[var(--accent-theme)] text-[#050505] font-mono-code text-xs font-black tracking-widest uppercase hover:opacity-90 transition-all clip-chamfer-btn shadow-[0_0_20px_var(--accent-glow)] group"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--accent-theme)] text-[#050505] font-mono-code text-xs font-black tracking-widest uppercase hover:opacity-90 transition-all clip-chamfer-btn shadow-[0_0_20px_var(--accent-glow)] group"
                 data-cursor="SEND"
               >
                 <span>{sending ? "OPENING MAIL.." : "SEND"}</span>
@@ -112,7 +117,7 @@ export default function LetsTalk() {
                 <a
                   href={`mailto:${portfolioData.contact.email}`}
                   onClick={() => playSound("click")}
-                  className="text-[#A0A0A0] hover:text-[var(--accent-theme)] transition-colors underline underline-offset-4 font-semibold"
+                  className="text-[#F5F5F5] hover:text-[var(--accent-theme)] transition-colors underline underline-offset-4 font-bold"
                 >
                   {portfolioData.contact.email.toUpperCase()}
                 </a>
